@@ -1,9 +1,12 @@
+
+
 % columns: timestamp, x, y, z
 
 M = csvread('IYKK-ZRKC-SUNF-FZCH-JPBS_1526315880000_ds000_00a05044b711_accelerometer.csv', 1);
-M(1,1)
-M(1,2)
 
+
+%================get a sample time===============================
+M(1,1)
 
 %convert unix time to real time
 dt = datetime(M(1,1), 'ConvertFrom', 'posixtime');
@@ -37,4 +40,6 @@ plot(ax3, M(:,1), M(:,4))
 title(ax3, 'z acceleration')
 xlabel(ax3, 'Time (s)')
 ylabel(ax3, 'Acceleration (m/s^2)')
+
+
 
