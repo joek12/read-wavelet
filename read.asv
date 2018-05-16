@@ -17,11 +17,9 @@ M = csvread('IYKK-ZRKC-SUNF-FZCH-JPBS_1526315880000_ds000_00a05044b711_accelerom
 %timearray = timeconverter(M(1,1))
 
 %timeArray = datetime(timeconverter(M(:,1)));
-length = size(M);
-timeArray = zeros(size(1),1);
+timeArray = [];
 for i=1:2262
-    [yy MM dd hh mm ss] = timeconverter(M(i,1));
-    timeArray(i) =  datetime([yy MM dd hh mm ss]);
+    timeArray = [timeArray; datetime(timeconverter(M(i,1))]
 end
 
 

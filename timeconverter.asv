@@ -46,7 +46,7 @@ for j = 1:2
     
     hour = (timeArray(i) - 48)*10^(2-j) + hour;
     % skip the colon and read the minutes
-    minute = (timeArray(i + 3) - 48)*10^(2-j) + minute;
+    minute = (timeArray(i + 3) - 48)*10^(2-j) + minute
     % skip the colon and read the seconds
     second = (timeArray(i + 6) - 48)*10^(2-j) + second;
     
@@ -56,6 +56,7 @@ end
 % change the month to a numeric value
 if month == 'Jan'
     month = 1;
+end
 elseif month == 'Feb'
     month = 2;
 elseif month == 'Mar'
