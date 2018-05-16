@@ -7,9 +7,9 @@ M(1,2)
 
 %convert unix time to real time
 dt = datetime(M(1,1), 'ConvertFrom', 'posixtime');
-ds = datestr(dt);
-timeArray = double(ds);
-
+ds = datestr(dt)
+timeArray = double(ds)
+%timearray = timeconverter(M(1,1))
 
 
 
@@ -23,13 +23,13 @@ figure
 ax1 = subplot(3,1,1); % Create a 2x1 subplot with this being the top subplot
 plot(ax1,M(:,1), M(:,2))
 title(ax1,'x acceleration')
-xlabel(ax1,'Time (s)')
+%xlabel(ax1,'Time (s)')
 ylabel(ax1,'Acceleration (m/s^2)')
 
 ax2 = subplot(3,1,2); % Middle subplot
 plot(ax2,M(:,1), M(:,3))
 title(ax2, 'y acceleration')
-xlabel(ax2, 'Time (s)')
+%xlabel(ax2, 'Time (s)')
 ylabel(ax2, 'Acceleration (m/s^2)')
 
 ax3 = subplot(3,1,3); % Bottom subplot
